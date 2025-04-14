@@ -1,4 +1,4 @@
-package brokers
+package actors
 
 import blockchain.Transaction
 import Broker._

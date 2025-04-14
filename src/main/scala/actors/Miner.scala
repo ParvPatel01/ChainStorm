@@ -1,4 +1,4 @@
-package brokers
+package actors
 
 import akka.actor.{Actor, ActorLogging, Props}
 import Miner.*
