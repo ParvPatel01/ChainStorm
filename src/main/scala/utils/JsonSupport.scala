@@ -9,7 +9,7 @@ object JsonSupport extends DefaultJsonProtocol {
     def write(t: Transaction) = JsObject(
       "sender" -> JsString(t.sender),
       "recipient" -> JsString(t.recipient),
-      "value" -> JsNumber(t.value),
+      "value" -> JsNumber(t.value)
     )
 
     def read(value: JsValue) = {
