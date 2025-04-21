@@ -31,7 +31,7 @@ trait NodeRoutes extends SprayJsonSupport {
           get {
             val statusFuture: Future[Chain] = (node ? GetStatus).mapTo[Chain]
             onSuccess(statusFuture) { status =>
-              complete(StatusCodes.OK, status)
+              complete(StatusCodes.OK, status) // Will use implicit JsonFormat[Chain]
             }
           }
         )
