@@ -23,6 +23,14 @@ lazy val root = (project in file("."))
       "com.typesafe.akka" %% "akka-cluster-tools" % akkaVersion,
     )
   )
+enablePlugins(JavaAppPackaging)
+enablePlugins(DockerPlugin)
+enablePlugins(AshScriptPlugin)
+
+mainClass in Compile := Some("Server")
+version in Docker := "latest"
+dockerExposedPorts := Seq(8000)
+dockerRepository := Some("parv90")
 
 
 
